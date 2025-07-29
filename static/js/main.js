@@ -32,11 +32,11 @@ function generateAnimatedIcons() {
 
   // Liste des icônes disponibles
   const iconsList = [
-    'assets/icons/play.svg',
-    'assets/icons/pause.svg',
-    'assets/icons/clap.svg',
-    'assets/icons/film-reel.svg',
-    'assets/icons/camera.svg'
+    '../static/images/play.svg',
+    '../static/images/pause.svg',
+    '../static/images/clap.svg',
+    '../static/images/reel.svg',
+    '../static/images/camera.svg'
   ];
 
   for (let i = 0; i < totalIcons; i++) {

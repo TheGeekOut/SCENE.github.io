@@ -21,7 +21,7 @@ function launchScene() {
 
   // Redirige vers une page (à changer plus tard)
   setTimeout(() => {
-    window.location.href = "catalogue.html"; // à adapter quand tu crées la page suivante
+    window.location.href = "../templates/reception.html"; // à adapter quand tu crées la page suivante
   }, 1200);
 }
 

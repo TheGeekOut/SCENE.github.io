@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+/* Fond animé rempli */
+#background-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none; /* pour ne pas bloquer le hover */
+}
+
+.anim-icon {
+  position: absolute;
+  width: 40px;
+  opacity: 0.05;
+  animation: float linear infinite;
+  transition: transform 0.2s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-150vh) rotate(360deg);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 25%;
+}
+
+.title {
+  font-size: 4rem;
+  letter-spacing: 6px;
+  animation: pulse 6s infinite;
+  transition: opacity 0.2s ease, transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.title:hover {
+  color: #6a5acd; /* bleu violet */
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.enter-btn {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background-color: #1f1f1f;
+  border: 2px solid #555;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+  background-color: #2e2e2e;
+  border-color: #888;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Overlay noir pour animation d'entrée */
+#overlay-transition {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+/* Section À propos */
+.about-section {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.about-section h2 {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #aaa;
+}
+
+.about-section p {
+  max-width: 400px;
+  margin: 0 auto 0.5rem;
+  line-height: 1.3;
+}
+
+.about-link {
+  color: #6a5acd;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.about-link:hover {
+  color: #8b7bf9;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
+  .enter-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  .about-section p {
+    max-width: 90%;
+  }
+}

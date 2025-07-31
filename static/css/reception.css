@@ -8,11 +8,16 @@ body {
 }
 
 .navbar {
-  background-color: #111;
+  background-color: #111111;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar:hover {
+  background-color: #a020f0; /* Ou la couleur violette de ton choix */
+  transition: background 0.5s, transform 0.5s;
 }
 
 .navbar .logo {
@@ -29,11 +34,11 @@ body {
 .navbar a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: background 0.5s, transform 0.5s;
 }
 
 .navbar a:hover {
-  color: #a020f0;
+  color: #000000;
 }
 
 .section {
@@ -59,7 +64,7 @@ body {
   width: 180px;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: background 0.5s, transform 0.5s;
 }
 
 .card img {
@@ -92,13 +97,13 @@ body {
   border: 1px solid white;
   border-radius: 20px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+  transition: background 0.5s, transform 0.5s;
   color: white;
   font-size: 0.95rem;
 }
 
 .genre-tag:hover {
-  background-color: #6a0dad;
+  background-color: #a020f0;
   transform: scale(1.05);
 }
 

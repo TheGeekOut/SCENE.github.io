@@ -1,4 +1,3 @@
-/* Thème sombre général */
 body {
   background-color: #0d0d0d;
   color: white;
@@ -16,8 +15,7 @@ body {
 }
 
 .navbar:hover {
-  background-color: #a020f0; /* Ou la couleur violette de ton choix */
-  transition: background 0.5s, transform 0.5s;
+  background: linear-gradient(170deg, #a020f0, #a020f0, #111111, #111111, #111111);
 }
 
 .navbar .logo {
@@ -35,10 +33,11 @@ body {
   color: white;
   text-decoration: none;
   transition: background 0.5s, transform 0.5s;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .navbar a:hover {
-  color: #000000;
+  color: #a020f0;
 }
 
 .section {
@@ -52,8 +51,8 @@ body {
 
 .carousel {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  overflow-x: auto;
   padding-bottom: 10px;
 }
 
@@ -62,6 +61,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   width: 180px;
+  height: 270px;
   cursor: pointer;
   border: 2px solid transparent;
   transition: background 0.5s, transform 0.5s;
@@ -72,16 +72,11 @@ body {
   display: block;
 }
 
-.card p {
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
 .card:hover {
   transform: scale(1.05);
   border-color: #a020f0;
   z-index: 10;
+  filter: drop-shadow(0 0 10px #a020f0);
 }
 
 .genres {
@@ -145,3 +140,4 @@ body {
 .close:hover {
   color: #a020f0;
 }
+

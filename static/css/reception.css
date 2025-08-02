@@ -7,15 +7,28 @@ body {
 }
 
 .navbar {
-  background-color: #111111;
+  background: #111111;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.navbar:hover {
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(170deg, #a020f0, #a020f0, #111111, #111111, #111111);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.navbar:hover::before {
+  opacity: 1;
 }
 
 .navbar .logo {
@@ -28,6 +41,7 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+
 }
 
 .navbar a {
@@ -140,4 +154,3 @@ body {
 .close:hover {
   color: #a020f0;
 }
-

@@ -30,7 +30,7 @@ h1 {
 .content h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #b48eff; /* violet doux */
+  color: #a020f0; /* violet doux */
 }
 
 .content p {
@@ -59,5 +59,5 @@ strong {
 .btn:hover {
   background-color: #ffffff;
   color: #0a0a0a;
-  box-shadow: 0 0 12px #b48eff, 0 0 24px #b48eff;
+  box-shadow: 0 0 12px #a020f0, 0 0 24px #a020f0;
 }
